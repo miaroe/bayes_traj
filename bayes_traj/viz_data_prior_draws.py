@@ -145,7 +145,17 @@ def main():
                               module_name='bayes_traj')
         print("DONE.")
     else:
+        print("Displaying plot...")
         plt.show()
 
 if __name__ == "__main__":
-    main()    
+    main()
+
+def run_plot_from_args(args=None):
+    if args is None:
+        main()
+    else:
+        # Simulate the command line argument parsing
+        import sys
+        sys.argv = ['viz_data_prior_draws.py'] + args
+        main()

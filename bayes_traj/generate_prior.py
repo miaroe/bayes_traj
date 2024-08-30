@@ -851,6 +851,14 @@ def main():
         write_provenance_data(op.out_file, generator_args=op, desc=desc,
                               module_name='bayes_traj')
         
-if __name__ == "__main__":
-    main()
-    
+#if __name__ == "__main__":
+#    main()
+
+def run_generate_prior_with_args(args=None):
+    if args is None:
+        main()
+    else:
+        # Manually parse the arguments as if they were passed from the command line
+        import sys
+        sys.argv = ['generate_prior.py'] + args
+        main()

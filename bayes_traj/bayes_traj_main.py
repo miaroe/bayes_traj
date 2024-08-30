@@ -330,4 +330,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def run_bayes_traj_with_args(args=None):
+    if args is None:
+        main()
+    else:
+        # Simulate the command line argument parsing
+        import sys
+        sys.argv = ['bayes_traj_main.py'] + args
+        main()
         

@@ -121,3 +121,12 @@ def main():
 
 if __name__ == "__main__":
     main()                  
+
+def run_visualization_with_args(args=None):
+    if args is None:
+        main()
+    else:
+        # Simulate the command line argument parsing
+        import sys
+        sys.argv = ['visualization_script.py'] + args
+        main()
